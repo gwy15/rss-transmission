@@ -1,0 +1,14 @@
+[basic]
+interval = "10m"
+sqlite_path = "data.sqlite"
+rpc_url = "http://127.0.0.1:8080/transmission/rpc"
+rpc_username = ""
+rpc_password = ""
+
+[[rss]]
+name = "example"
+url = "https://example.com/rss"
+# download path
+path = "/downloads/example.com"
+# optional
+# proxy = "socks5h://127.0.0.1:7890"
