@@ -17,7 +17,7 @@ pretty_env_logger = "0.4.0"
 reqwest = { version = "0.11.10", default-features = false }
 rss = "2.0.0"
 serde = { version = "1.0.136", features = ["derive"] }
-sqlx = { version = "0.5.11", features = ["sqlite", "migrate", "macros"] }
+sqlx = { version = "0.5.11", features = ["sqlite", "migrate", "macros", "offline"] }
 tokio = { version = "1.17.0", features = ["macros", "rt", "rt-multi-thread", "fs"] }
 toml = "0.5.8"
 transmission-rpc = "0.3.6"

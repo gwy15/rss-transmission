@@ -10,7 +10,10 @@ async fn main() -> Result<()> {
     }
     pretty_env_logger::try_init_timed()?;
 
-    let config_s = tokio::fs::read_to_string("config.toml").await?;
+    let config_path = env::var("CONFIG_FILE").unwrap_or_else(|_| "config.toml".to_string());
+    let config_s = tokio::fs::read_to_string(&config_path)
+        .await
+        .context("Read config file failed.")?;
     let config: Config = toml::from_str(&config_s)?;
     config.validate()?;
 

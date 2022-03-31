@@ -1,0 +1,31 @@
+{
+  "db": "SQLite",
+  "5c0ffee975b156f31967a3f8fc031fde176d58d840b20202a85640e073bc0aa1": {
+    "query": "\n            INSERT INTO `torrents`\n                (`guid`, `title`, `link`, `torrent_url`, `torrent_size`)\n            VALUES\n                (?, ?, ?, ?, ?)\n            ",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Right": 5
+      },
+      "nullable": []
+    }
+  },
+  "c5bf3f4a699184737546490222c0f161be2f96849fa77e2bf780604a9e5ad94d": {
+    "query": "\n            SELECT 1\n            FROM `torrents`\n            WHERE `guid` = ?\n            LIMIT 1;\n            ",
+    "describe": {
+      "columns": [
+        {
+          "name": "1",
+          "ordinal": 0,
+          "type_info": "Int64"
+        }
+      ],
+      "parameters": {
+        "Right": 1
+      },
+      "nullable": [
+        false
+      ]
+    }
+  }
+}
