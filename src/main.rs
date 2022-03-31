@@ -1,6 +1,6 @@
 use std::{env, sync::Arc};
 
-use anyhow::Result;
+use anyhow::{Context, Result};
 use rss_transmission::{db, Config};
 
 #[tokio::main]
