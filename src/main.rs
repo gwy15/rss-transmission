@@ -6,7 +6,10 @@ use rss_transmission::{db, Config};
 #[tokio::main]
 async fn main() -> Result<()> {
     if env::var("RUST_LOG").is_err() {
-        env::set_var("RUST_LOG", "debug,sqlx=warn,rustls=info,transmission_rpc=warn");
+        env::set_var(
+            "RUST_LOG",
+            "debug,sqlx=warn,rustls=info,transmission_rpc=warn",
+        );
     }
     pretty_env_logger::try_init_timed()?;
 
